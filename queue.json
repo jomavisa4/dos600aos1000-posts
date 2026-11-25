@@ -30,11 +30,18 @@
       "imageHash": "629fd4263fbde806220e4a178e5c56cf1a30c3ee88f8386ba7b8a6c1f3d646bd",
       "headline": "Você sabe quanto sua redação vale HOJE?",
       "publicadoEm": "2026-11-25T14:31:10.214Z"
+    },
+    {
+      "id": "20261125-150001-d2t1",
+      "imageHash": "abe93ea9841cc0fba1a4a065fda065c958da7c6d8bc9157043740cc9b9634bec",
+      "headline": "Eu citando Zygmunt Bauman em qualquer tema do ENEM",
+      "publicadoEm": "2026-11-25T17:00:19.680Z"
     }
   ],
   "slots": {
     "2026-11-25 feed 09:00": "2026-11-25T14:01:41.976Z",
-    "2026-11-25 story 11:30": "2026-11-25T14:31:10.214Z"
+    "2026-11-25 story 11:30": "2026-11-25T14:31:10.214Z",
+    "2026-11-25 feed 14:00": "2026-11-25T17:00:19.680Z"
   },
   "posts": [
     {
@@ -69,7 +76,7 @@
       "formato": "feed",
       "ordem": 2,
       "agenda": "Qua 25/11 · 14:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Meme Bauman em todo tema",
       "headline": "Eu citando Zygmunt Bauman em qualquer tema do ENEM",
       "template": "meme",
@@ -79,7 +86,13 @@
         "#MemeENEM",
         "#ZygmuntBauman",
         "#RedacaoENEM"
-      ]
+      ],
+      "fbPostId": "1537036239483766_122112696873543554",
+      "igPostId": "18019828925747990",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261125-150001-d2t1.png",
+      "publicadoEm": "2026-11-25T17:00:19.680Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261122-235238-2jg6",
