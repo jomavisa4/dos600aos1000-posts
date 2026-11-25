@@ -36,12 +36,19 @@
       "imageHash": "abe93ea9841cc0fba1a4a065fda065c958da7c6d8bc9157043740cc9b9634bec",
       "headline": "Eu citando Zygmunt Bauman em qualquer tema do ENEM",
       "publicadoEm": "2026-11-25T17:00:19.680Z"
+    },
+    {
+      "id": "20261122-235238-2jg6",
+      "imageHash": "1387c7e06eea9afd41b4906ff7b5edb23e0d56297bbc8b4e684dcfd9706dc408",
+      "headline": "O erro que travou sua nota na Competência 3",
+      "publicadoEm": "2026-11-25T23:03:43.528Z"
     }
   ],
   "slots": {
     "2026-11-25 feed 09:00": "2026-11-25T14:01:41.976Z",
     "2026-11-25 story 11:30": "2026-11-25T14:31:10.214Z",
-    "2026-11-25 feed 14:00": "2026-11-25T17:00:19.680Z"
+    "2026-11-25 feed 14:00": "2026-11-25T17:00:19.680Z",
+    "2026-11-25 feed 20:00": "2026-11-25T23:03:43.528Z"
   },
   "posts": [
     {
@@ -100,7 +107,7 @@
       "formato": "feed",
       "ordem": 3,
       "agenda": "Qua 25/11 · 20:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Erro na Competência 3",
       "headline": "O erro que travou sua nota na Competência 3",
       "template": "auditoria",
@@ -111,7 +118,13 @@
         "#RedacaoENEM",
         "#ENEM2027"
       ],
-      "imageExt": "jpg"
+      "imageExt": "jpg",
+      "fbPostId": "1537036239483766_122112810015543554",
+      "igPostId": "18140382475656983",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261122-235238-2jg6.jpg",
+      "publicadoEm": "2026-11-25T23:03:43.528Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261125-090001-d2m1",
