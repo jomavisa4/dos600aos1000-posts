@@ -18,9 +18,17 @@
       "imageHash": "43f2d87b33f80760b08ef468629a8808c3729135be0536de0791b4aafae9411a",
       "headline": "tire foto da sua redacao manuscrita e saiba a nota",
       "publicadoEm": "2026-11-24T09:51:18.688Z"
+    },
+    {
+      "id": "20261124-004646-r5q9",
+      "imageHash": "d8f8d0af8bcb5d309cec726d6989fe0ca6de72a2069a6cbb059bbc7b2acfc94a",
+      "headline": "Faltou um elemento na proposta de intervenção?",
+      "publicadoEm": "2026-11-25T14:01:41.976Z"
     }
   ],
-  "slots": {},
+  "slots": {
+    "2026-11-25 feed 09:00": "2026-11-25T14:01:41.976Z"
+  },
   "posts": [
     {
       "id": "20261124-004646-r5q9",
@@ -28,7 +36,7 @@
       "formato": "feed",
       "ordem": 1,
       "agenda": "Qua 25/11 · 09:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Proposta de Intervenção",
       "headline": "Faltou um elemento na proposta de intervenção?",
       "template": "bento",
@@ -40,7 +48,13 @@
         "#competencia5",
         "#Vestibular2027",
         "#estudos"
-      ]
+      ],
+      "fbPostId": "1537036239483766_122112613161543554",
+      "igPostId": "18392642302231861",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261124-004646-r5q9.png",
+      "publicadoEm": "2026-11-25T14:01:41.976Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261125-150001-d2t1",
