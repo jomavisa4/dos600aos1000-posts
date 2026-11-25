@@ -4,7 +4,8 @@ on:
   schedule:
     # Crons fora do minuto :00 + worker continuo de 5h30 (mesma estrategia estavel do keepalive)
     - cron: '13 */2 * * *'
-    - cron: '47 11,16,20,22 * * *' # 13 min antes de 09h, 14h, 18h e 20h BRT
+    - cron: '47 11,16,22 * * *' # 13 min antes de 09h, 14h e 20h BRT
+    - cron: '17 14 * * *'       # 13 min antes de 11:30 BRT (Story)
   workflow_dispatch:
     inputs:
       dry_run:
@@ -45,7 +46,7 @@ jobs:
           DRY_RUN: 'true'
         run: node cloud-publish.mjs
 
-      - name: Worker na nuvem (09:00 / 14:00 / 18:00 / 20:00 BRT)
+      - name: Worker na nuvem (09:00 / 11:30 Story / 14:00 / 20:00 BRT)
         if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
         env:
           META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
