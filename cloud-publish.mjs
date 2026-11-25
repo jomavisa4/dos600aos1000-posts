@@ -2,13 +2,14 @@
 // cloud-publish.mjs — publicador automatico 100% em nuvem (GitHub Actions).
 // Roda sem dependencia externa (Node 22+ nativo), le e atualiza ./queue.json,
 // usa as imagens hospedadas no proprio repositorio via raw.githubusercontent.com
-// e aplica trava dupla: por slot de horario e por hash SHA-256 anti-repeticao.
+// e aplica trava dupla: por slot de horario (com repescagem) e SHA-256 anti-repeticao.
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const GRAPH_BASE = "https://graph.facebook.com/v22.0";
 const QUEUE_FILE = join(process.cwd(), "queue.json");
+const DONE_FILE = join(process.cwd(), ".fila_concluida");
 const IMG_BASE = (
   process.env.PUBLIC_IMAGE_BASE ||
   "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main"
@@ -19,10 +20,18 @@ const HANDLE = process.env.HANDLE || "@dos600aos1000";
 const TOKEN = (process.env.META_PAGE_TOKEN || "").trim();
 const PAGE_ID = (process.env.META_PAGE_ID || "").trim();
 const IG_ID = (process.env.META_IG_ID || "").trim();
+const SLOT_MODE = (process.env.SLOT_MODE || "due").trim().toLowerCase(); // "due" | "manual"
 const SLOT_FORMAT = (process.env.SLOT_FORMAT || "feed").trim().toLowerCase() === "story" ? "story" : "feed";
-const SLOT_HORA = (process.env.SLOT_HORA || "manual").trim();
 const DRY_RUN = /^(1|true|yes|sim)$/i.test(String(process.env.DRY_RUN || "").trim());
 const SKIP_URL_CHECK = /^(1|true)$/i.test(String(process.env.SKIP_URL_CHECK || "").trim());
+const VERBOSE = /^(1|true)$/i.test(String(process.env.VERBOSE || "").trim());
+
+const AGENDA_DIA = [
+  { hora: "09:00", min: 9 * 60, formato: "feed" },
+  { hora: "14:00", min: 14 * 60, formato: "feed" },
+  { hora: "18:00", min: 18 * 60, formato: "story" },
+  { hora: "20:00", min: 20 * 60, formato: "feed" },
+];
 
 function carregarFila() {
   if (!existsSync(QUEUE_FILE)) throw new Error("queue.json nao encontrado.");
@@ -42,8 +51,26 @@ function sha256Arquivo(caminho) {
   return createHash("sha256").update(readFileSync(caminho)).digest("hex");
 }
 
-function diaBRT() {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(new Date());
+function agoraBRT() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Sao_Paulo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+  }).formatToParts(new Date());
+  const map = Object.fromEntries(parts.map((p) => [p.type, p.value]));
+  const hora = Number(map.hour);
+  const minuto = Number(map.minute);
+  return {
+    dia: `${map.year}-${map.month}-${map.day}`,
+    hora,
+    minuto,
+    minTotal: hora * 60 + minuto,
+    hhmm: `${map.hour}:${map.minute}`,
+  };
 }
 
 function legendaFinal(post) {
@@ -167,6 +194,7 @@ function proximoRascunho(queue, formato, { mutar = true } = {}) {
       return String(a.criadoEm || "") > String(b.criadoEm || "") ? 1 : -1;
     });
 
+  let mudou = false;
   for (const p of candidatos) {
     const imgPath = join(process.cwd(), "img", `${p.id}.png`);
     const hash = sha256Arquivo(imgPath);
@@ -175,11 +203,13 @@ function proximoRascunho(queue, formato, { mutar = true } = {}) {
       if (mutar) {
         p.status = "rejected";
         p.erro = "Imagem duplicada (ja publicada antes).";
+        mudou = true;
       }
       continue;
     }
-    return { post: p, imageHash: hash };
+    return { post: p, imageHash: hash, mudou };
   }
+  if (mudou && mutar) salvarFila(queue);
   return null;
 }
 
@@ -192,52 +222,7 @@ async function verificarImagemPublica(url) {
   return res.status;
 }
 
-async function main() {
-  if (!TOKEN || !PAGE_ID || !IG_ID) {
-    throw new Error("Secrets META_PAGE_TOKEN, META_PAGE_ID ou META_IG_ID nao configurados.");
-  }
-  const queue = carregarFila();
-
-  if (DRY_RUN) {
-    const pageInfo = await graph(`/${PAGE_ID}`, { params: { fields: "id,name" }, token: TOKEN });
-    const igInfo = await graph(`/${IG_ID}`, { params: { fields: "id,username" }, token: TOKEN });
-    const proxFeed = proximoRascunho(queue, "feed", { mutar: false });
-    const proxStory = proximoRascunho(queue, "story", { mutar: false });
-
-    let feedStatus = "fila vazia";
-    if (proxFeed) {
-      const url = `${IMG_BASE}/img/${proxFeed.post.id}.png`;
-      const st = SKIP_URL_CHECK ? "skip" : await verificarImagemPublica(url);
-      feedStatus = `${proxFeed.post.id} (${proxFeed.post.agenda || "-"}) -> HTTP ${st}`;
-    }
-
-    let storyStatus = "fila vazia";
-    if (proxStory) {
-      const url = `${IMG_BASE}/img/${proxStory.post.id}.png`;
-      const st = SKIP_URL_CHECK ? "skip" : await verificarImagemPublica(url);
-      storyStatus = `${proxStory.post.id} (${proxStory.post.agenda || "-"}) -> HTTP ${st}`;
-    }
-
-    console.log(`[DRY-RUN OK] Pagina="${pageInfo.name}" IG="@${igInfo.username}"`);
-    console.log(`  Proximo FEED:  ${feedStatus}`);
-    console.log(`  Proximo STORY: ${storyStatus}`);
-    return;
-  }
-
-  const chaveSlot = `${diaBRT()} ${SLOT_FORMAT} ${SLOT_HORA}`;
-  if (SLOT_HORA !== "manual" && queue.slots[chaveSlot]) {
-    console.log(`Slot ${chaveSlot} ja executado em ${queue.slots[chaveSlot]} — pulando.`);
-    return;
-  }
-
-  const sel = proximoRascunho(queue, SLOT_FORMAT, { mutar: true });
-  if (!sel) {
-    console.log(`Fila pronta (${SLOT_FORMAT}) concluida — nenhum post extra gerado.`);
-    salvarFila(queue);
-    return;
-  }
-
-  const { post, imageHash } = sel;
+async function publicarItem(queue, { post, imageHash }, formato, chaveSlot) {
   const imageUrl = post.imageUrl || `${IMG_BASE}/img/${post.id}.png`;
   if (!SKIP_URL_CHECK) {
     await verificarImagemPublica(imageUrl);
@@ -269,10 +254,16 @@ async function main() {
   }
 
   if (!post.fbPostId && !post.igPostId) {
-    post.status = "erro";
-    post.erro = JSON.stringify(erros);
+    post.tentativas = (post.tentativas || 0) + 1;
+    post.ultimaFalha = JSON.stringify(erros);
+    if (post.tentativas >= 3) {
+      post.status = "erro";
+      post.erro = post.ultimaFalha;
+    }
     salvarFila(queue);
-    throw new Error(`Falhou publicar ${post.id}. FB: ${erros.facebook || "-"} | IG: ${erros.instagram || "-"}`);
+    throw new Error(
+      `Falhou publicar ${post.id} (tentativa ${post.tentativas}/3). FB: ${erros.facebook || "-"} | IG: ${erros.instagram || "-"}`
+    );
   }
 
   post.status = "published";
@@ -281,6 +272,7 @@ async function main() {
   post.publicadoEm = new Date().toISOString();
   post.erros = Object.keys(erros).length ? erros : null;
   post.erro = null;
+  delete post.ultimaFalha;
 
   if (!queue.publicados.some((r) => r.id === post.id)) {
     queue.publicados.push({
@@ -290,14 +282,84 @@ async function main() {
       publicadoEm: post.publicadoEm,
     });
   }
-  if (SLOT_HORA !== "manual") {
+  if (chaveSlot) {
     queue.slots[chaveSlot] = post.publicadoEm;
   }
   salvarFila(queue);
 
   const redes = [post.fbPostId ? "Facebook" : null, post.igPostId ? "Instagram" : null].filter(Boolean).join("+");
-  console.log(`Publicado ${SLOT_FORMAT.toUpperCase()} ${post.id} (${post.agenda || "-"}) em ${redes}.`);
+  console.log(`[PUBLICADO] ${chaveSlot || "manual"} -> ${post.id} (${post.agenda || formato}) em ${redes}.`);
   if (post.erros) console.warn("Avisos parciais:", JSON.stringify(post.erros));
+}
+
+async function main() {
+  if (!TOKEN || !PAGE_ID || !IG_ID) {
+    throw new Error("Secrets META_PAGE_TOKEN, META_PAGE_ID ou META_IG_ID nao configurados.");
+  }
+  const queue = carregarFila();
+
+  if (DRY_RUN) {
+    const pageInfo = await graph(`/${PAGE_ID}`, { params: { fields: "id,name" }, token: TOKEN });
+    const igInfo = await graph(`/${IG_ID}`, { params: { fields: "id,username" }, token: TOKEN });
+    const proxFeed = proximoRascunho(queue, "feed", { mutar: false });
+    const proxStory = proximoRascunho(queue, "story", { mutar: false });
+
+    let feedStatus = "fila vazia";
+    if (proxFeed) {
+      const url = `${IMG_BASE}/img/${proxFeed.post.id}.png`;
+      const st = SKIP_URL_CHECK ? "skip" : await verificarImagemPublica(url);
+      feedStatus = `${proxFeed.post.id} (${proxFeed.post.agenda || "-"}) -> HTTP ${st}`;
+    }
+
+    let storyStatus = "fila vazia";
+    if (proxStory) {
+      const url = `${IMG_BASE}/img/${proxStory.post.id}.png`;
+      const st = SKIP_URL_CHECK ? "skip" : await verificarImagemPublica(url);
+      storyStatus = `${proxStory.post.id} (${proxStory.post.agenda || "-"}) -> HTTP ${st}`;
+    }
+
+    const agora = agoraBRT();
+    console.log(`[DRY-RUN OK] Pagina="${pageInfo.name}" IG="@${igInfo.username}" BRT=${agora.dia} ${agora.hhmm}`);
+    console.log(`  Proximo FEED:  ${feedStatus}`);
+    console.log(`  Proximo STORY: ${storyStatus}`);
+    return;
+  }
+
+  if (SLOT_MODE === "manual") {
+    const sel = proximoRascunho(queue, SLOT_FORMAT, { mutar: true });
+    if (!sel) {
+      console.log(`Fila pronta (${SLOT_FORMAT}) concluida — nenhum item restante.`);
+      return;
+    }
+    await publicarItem(queue, sel, SLOT_FORMAT, "");
+    return;
+  }
+
+  // Modo continuo ("due"): verifica se a fila acabou ou se algum slot de hoje venceu
+  const temFeed = proximoRascunho(queue, "feed", { mutar: true });
+  const temStory = proximoRascunho(queue, "story", { mutar: true });
+  if (!temFeed && !temStory) {
+    writeFileSync(DONE_FILE, new Date().toISOString() + "\n", "utf8");
+    console.log("[FILA_CONCLUIDA] Todos os posts e stories da semana foram publicados.");
+    return;
+  }
+
+  const agora = agoraBRT();
+  for (const slot of AGENDA_DIA) {
+    if (agora.minTotal < slot.min) continue;
+    const chaveSlot = `${agora.dia} ${slot.formato} ${slot.hora}`;
+    if (queue.slots[chaveSlot]) continue;
+
+    const sel = proximoRascunho(queue, slot.formato, { mutar: true });
+    if (!sel) continue;
+
+    await publicarItem(queue, sel, slot.formato, chaveSlot);
+    return;
+  }
+
+  if (VERBOSE) {
+    console.log(`[aguardando] BRT ${agora.dia} ${agora.hhmm} — nenhum horario vencido agora.`);
+  }
 }
 
 main().catch((e) => {
