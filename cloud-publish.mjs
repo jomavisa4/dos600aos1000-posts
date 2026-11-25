@@ -74,8 +74,9 @@ function agoraBRT() {
 }
 
 function legendaFinal(post) {
-  const tags = (post.hashtags || []).join(" ");
-  return `${(post.caption || "").trim()}\n\n👉 Corrija sua redação de graça: ${OFFER_URL}\n\n${HANDLE}  ${tags}`.trim();
+  const corpo = (post.caption || "").trim();
+  const tags = (post.hashtags || []).filter(Boolean).join(" ");
+  return tags ? `${corpo}\n\n${tags}` : corpo;
 }
 
 async function graph(caminho, { method = "GET", params = {}, token } = {}) {
