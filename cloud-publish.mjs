@@ -182,6 +182,14 @@ function hashesPublicados(queue) {
   return s;
 }
 
+function arquivoImagemPost(post) {
+  const jpg = join(process.cwd(), "img", `${post.id}.jpg`);
+  if (existsSync(jpg)) return { path: jpg, ext: "jpg" };
+  const png = join(process.cwd(), "img", `${post.id}.png`);
+  if (existsSync(png)) return { path: png, ext: "png" };
+  return null;
+}
+
 function proximoRascunho(queue, formato, { mutar = true } = {}) {
   const ehStory = formato === "story";
   const usados = hashesPublicados(queue);
@@ -197,8 +205,9 @@ function proximoRascunho(queue, formato, { mutar = true } = {}) {
 
   let mudou = false;
   for (const p of candidatos) {
-    const imgPath = join(process.cwd(), "img", `${p.id}.png`);
-    const hash = sha256Arquivo(imgPath);
+    const arq = arquivoImagemPost(p);
+    if (!arq) continue;
+    const hash = sha256Arquivo(arq.path);
     if (!hash) continue;
     if (usados.has(hash)) {
       if (mutar) {
@@ -208,7 +217,7 @@ function proximoRascunho(queue, formato, { mutar = true } = {}) {
       }
       continue;
     }
-    return { post: p, imageHash: hash, mudou };
+    return { post: p, imageHash: hash, ext: arq.ext, mudou };
   }
   if (mudou && mutar) salvarFila(queue);
   return null;
@@ -223,8 +232,9 @@ async function verificarImagemPublica(url) {
   return res.status;
 }
 
-async function publicarItem(queue, { post, imageHash }, formato, chaveSlot) {
-  const imageUrl = post.imageUrl || `${IMG_BASE}/img/${post.id}.png`;
+async function publicarItem(queue, { post, imageHash, ext }, formato, chaveSlot) {
+  const extFinal = ext || post.imageExt || "jpg";
+  const imageUrl = post.imageUrl || `${IMG_BASE}/img/${post.id}.${extFinal}`;
   if (!SKIP_URL_CHECK) {
     await verificarImagemPublica(imageUrl);
   }
@@ -307,16 +317,16 @@ async function main() {
 
     let feedStatus = "fila vazia";
     if (proxFeed) {
-      const url = `${IMG_BASE}/img/${proxFeed.post.id}.png`;
+      const url = `${IMG_BASE}/img/${proxFeed.post.id}.${proxFeed.ext || "jpg"}`;
       const st = SKIP_URL_CHECK ? "skip" : await verificarImagemPublica(url);
-      feedStatus = `${proxFeed.post.id} (${proxFeed.post.agenda || "-"}) -> HTTP ${st}`;
+      feedStatus = `${proxFeed.post.id}.${proxFeed.ext} (${proxFeed.post.agenda || "-"}) -> HTTP ${st}`;
     }
 
     let storyStatus = "fila vazia";
     if (proxStory) {
-      const url = `${IMG_BASE}/img/${proxStory.post.id}.png`;
+      const url = `${IMG_BASE}/img/${proxStory.post.id}.${proxStory.ext || "jpg"}`;
       const st = SKIP_URL_CHECK ? "skip" : await verificarImagemPublica(url);
-      storyStatus = `${proxStory.post.id} (${proxStory.post.agenda || "-"}) -> HTTP ${st}`;
+      storyStatus = `${proxStory.post.id}.${proxStory.ext} (${proxStory.post.agenda || "-"}) -> HTTP ${st}`;
     }
 
     const agora = agoraBRT();
