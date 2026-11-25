@@ -28,8 +28,8 @@ const VERBOSE = /^(1|true)$/i.test(String(process.env.VERBOSE || "").trim());
 
 const AGENDA_DIA = [
   { hora: "09:00", min: 9 * 60, formato: "feed" },
+  { hora: "11:30", min: 11 * 60 + 30, formato: "story" },
   { hora: "14:00", min: 14 * 60, formato: "feed" },
-  { hora: "18:00", min: 18 * 60, formato: "story" },
   { hora: "20:00", min: 20 * 60, formato: "feed" },
 ];
 
