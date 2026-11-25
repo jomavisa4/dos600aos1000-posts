@@ -1,0 +1,428 @@
+{
+  "geradoEm": "2026-11-25T06:44:36.942Z",
+  "publicados": [
+    {
+      "id": "20261124-070029-jpmx",
+      "imageHash": "8de2bfb2ec3599e0e18805c2b6e8ce7f4bbde47b08414577775c9154000c60f5",
+      "headline": "como evitar tangenciar o tema e perder 120 pontos na c2",
+      "publicadoEm": "2026-11-24T10:00:53.722Z"
+    },
+    {
+      "id": "20261124-065346-w637",
+      "imageHash": "faa9bb992ca7d6e3f3c67e50bb6e78b553d626375e3484dbb03a180589649161",
+      "headline": "seu repertorio nao serve se estiver solto",
+      "publicadoEm": "2026-11-24T09:54:09.241Z"
+    },
+    {
+      "id": "20261124-064344-wfta",
+      "imageHash": "43f2d87b33f80760b08ef468629a8808c3729135be0536de0791b4aafae9411a",
+      "headline": "tire foto da sua redacao manuscrita e saiba a nota",
+      "publicadoEm": "2026-11-24T09:51:18.688Z"
+    }
+  ],
+  "slots": {},
+  "posts": [
+    {
+      "id": "20261124-004646-r5q9",
+      "criadoEm": "2026-11-24T03:46:46.721Z",
+      "formato": "feed",
+      "ordem": 1,
+      "agenda": "Qua 25/11 · 09:00",
+      "status": "draft",
+      "tema": "Proposta de Intervenção",
+      "headline": "Faltou um elemento na proposta de intervenção?",
+      "template": "bento",
+      "imageHash": "d8f8d0af8bcb5d309cec726d6989fe0ca6de72a2069a6cbb059bbc7b2acfc94a",
+      "caption": "A proposta de intervenção do ENEM precisa ter 5 elementos obrigatórios: agente, ação, meio/modo, detalhamento e efeito. Se você esquecer um deles, sua nota na Competência 5 cai direto de 200 para 160.\n\nO erro mais comum é achar que o detalhamento está implícito quando, na verdade, faltou explicar melhor a ação ou o agente. Um pequeno descuido tira pontos preciosos que fariam diferença na sua média geral.\n\nTire uma foto da sua redação manuscrita e envie no dos 600 aos 1000. Em cerca de 1 minuto, você recebe a nota estimada nas 5 competências e descobre exatamente qual elemento faltou na sua proposta. A primeira correção é grátis e não pede cartão.",
+      "hashtags": [
+        "#ENEM2027",
+        "#redacaoenem",
+        "#competencia5",
+        "#Vestibular2027",
+        "#estudos"
+      ]
+    },
+    {
+      "id": "20261125-150001-d2t1",
+      "criadoEm": "2026-11-25T01:45:26.566Z",
+      "formato": "feed",
+      "ordem": 2,
+      "agenda": "Qua 25/11 · 14:00",
+      "status": "draft",
+      "tema": "Meme Bauman em todo tema",
+      "headline": "Eu citando Zygmunt Bauman em qualquer tema do ENEM",
+      "template": "meme",
+      "imageHash": "abe93ea9841cc0fba1a4a065fda065c958da7c6d8bc9157043740cc9b9634bec",
+      "caption": "Quem nunca tentou encaixar \"modernidade líquida\" do Bauman em literalmente qualquer tema que atire a primeira caneta preta transparente. 😂\n\nBrincadeiras à parte: citar um pensador famoso sem conectar a ideia dele ao problema exato do tema faz a Competência 2 estacionar em 120 ou 160 pontos.\n\nMarca aquele amigo que usa Bauman até na lista de compras 👇 e testa sua última redação de graça mandando a foto da folha no link da bio!",
+      "hashtags": [
+        "#MemeENEM",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#Vestibulando",
+        "#HumorDeEstudante",
+        "#Competencia2"
+      ]
+    },
+    {
+      "id": "20261122-235238-2jg6",
+      "criadoEm": "2026-11-23T02:52:38.758Z",
+      "formato": "feed",
+      "ordem": 3,
+      "agenda": "Qua 25/11 · 20:00",
+      "status": "draft",
+      "tema": "Erro na Competência 3",
+      "headline": "O erro que travou sua nota na Competência 3",
+      "template": "auditoria",
+      "imageHash": "95d53de6900826f0353851d5934961be91a7313847d4ffb75d460e0a690d2b5a",
+      "caption": "Muitos estudantes perdem pontos na Competência 3 por um motivo simples: citam o argumento no parágrafo, mas não explicam a causa e a consequência direta daquela ideia. O corretor entende como um repertório solto. O nosso sistema analisa a foto da sua redação manuscrita em cerca de 1 minuto, aponta exatamente onde a argumentação ficou rasa e dá sugestões de reescrita para os trechos críticos. Além disso, você acompanha a evolução de todas as suas notas diretamente na sua conta. Quer saber onde você está errando antes do dia da prova? Tire foto da sua folha e faça a primeira correção grátis, sem cadastrar cartão.",
+      "hashtags": [
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#Competencia3",
+        "#DicasDeRedacao",
+        "#EstudosENEM",
+        "#RedacaoNota1000"
+      ]
+    },
+    {
+      "id": "20261125-090001-d2m1",
+      "criadoEm": "2026-11-25T01:45:24.522Z",
+      "formato": "feed",
+      "ordem": 4,
+      "agenda": "Qui 26/11 · 09:00",
+      "status": "draft",
+      "tema": "Repertório Hannah Arendt",
+      "headline": "“O direito a ter direitos.”",
+      "template": "repertorio",
+      "imageHash": "83ca3692f6d26291634f026feadcf38d0b5d03c4a98e9fc85b255813114ede02",
+      "caption": "A filósofa Hannah Arendt cunhou uma das ideias mais versáteis para a redação do ENEM: antes de usufruir de saúde, educação ou trabalho, todo indivíduo precisa ter reconhecido o seu \"direito a ter direitos\".\n\nNa prática, você pode usar essa referência sempre que o tema tratar de invisibilidade social, falta de acesso a serviços públicos ou desigualdade estrutural — basta explicar em 1 frase como essa exclusão se repete no Brasil atual.\n\nQuer saber se o seu repertório está realmente produtivo ou solto no texto? Envie a foto da sua folha manuscrita e receba a nota nas 5 competências em menos de 1 minuto. Primeira correção grátis e sem cartão!",
+      "hashtags": [
+        "#ENEM2027",
+        "#RedacaoENEM",
+        "#RepertorioENEM",
+        "#Competencia2",
+        "#StudygramBR",
+        "#Vestibulando"
+      ]
+    },
+    {
+      "id": "20261126-150001-d3t1",
+      "criadoEm": "2026-11-25T01:45:31.243Z",
+      "formato": "feed",
+      "ordem": 5,
+      "agenda": "Qui 26/11 · 14:00",
+      "status": "draft",
+      "tema": "Meme faltam 15 minutos D2",
+      "headline": "Faltam 15 minutos e eu ainda tô no Desenvolvimento 2",
+      "template": "meme",
+      "imageHash": "9e08672cce29c19fdca085c634483b9b9ec8217b0cfc280fe9dd9ba27aa70235",
+      "caption": "A adrenalina de ouvir \"faltam 15 minutos\" quando você ainda está terminando o segundo desenvolvimento não tem igual. 😅\n\nO segredo para não atropelar a proposta de intervenção (e perder 80 pontos na C5 na correria) é treinar a redação cronometrada todas as semanas, já na folha de papel.\n\nManda esse post para quem sempre deixa para passar a limpo nos últimos 10 minutos 👇 e aproveita a primeira correção grátis no link da bio!",
+      "hashtags": [
+        "#MemeENEM",
+        "#ENEM2027",
+        "#RedacaoENEM",
+        "#Vestibular",
+        "#HumorENEM",
+        "#Estudantes"
+      ]
+    },
+    {
+      "id": "20261125-210001-d2n1",
+      "criadoEm": "2026-11-25T01:45:28.036Z",
+      "formato": "feed",
+      "ordem": 6,
+      "agenda": "Qui 26/11 · 20:00",
+      "status": "draft",
+      "tema": "Foto manuscrita nota real",
+      "headline": "Escreveu no caderno? Descubra sua nota hoje",
+      "template": "revista",
+      "imageHash": "c643d3d30c559535aebe9c0fc4ff5f754291bb1fa8a7dfccf811077dc2b3650c",
+      "caption": "No dia do ENEM você não escreve no teclado — você escreve à mão, na folha pautada, controlando o espaço das 30 linhas.\n\nPor isso, no dos 600 aos 1000 você pode mandar direto a foto da sua redação manuscrita pelo celular. Em menos de 1 minuto, a IA analisa cada uma das 5 competências e mostra onde estão os pontos que faltam para passar dos 900.\n\nSua primeira correção é totalmente gratuita e não pede cartão. Acesse o link da bio e teste agora!",
+      "hashtags": [
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#CorrecaoDeRedacao",
+        "#EstudosENEM",
+        "#RumoAos1000"
+      ]
+    },
+    {
+      "id": "20261126-090001-d3m1",
+      "criadoEm": "2026-11-25T01:45:29.782Z",
+      "formato": "feed",
+      "ordem": 7,
+      "agenda": "Sex 27/11 · 09:00",
+      "status": "draft",
+      "tema": "Erros de vírgula na C1",
+      "headline": "As 3 falhas de vírgula que derrubam sua C1",
+      "template": "caderno",
+      "imageHash": "6cf5ed317c057f0c22dd7267437579e3fa821a0fa8f6695dcdb868abf2de1c22",
+      "caption": "Muita gente escreve argumentos excelentes e perde 40 ou 80 pontos na Competência 1 por causa de vírgulas mal colocadas.\n\nA regra oficial da banca é objetiva: para alcançar 200 na C1, o texto pode ter no máximo 2 desvios pontuais e 1 falha sintática. Separar sujeito de verbo ou esquecer vírgula em adjunto adverbial longo conta desvio na hora.\n\nSalve este card para revisar antes da próxima redação e envie uma foto da sua folha no link da bio para descobrir todos os desvios de C1 do seu texto!",
+      "hashtags": [
+        "#Competencia1",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#PortuguesENEM",
+        "#DicasDeRedacao",
+        "#StudygramBR"
+      ]
+    },
+    {
+      "id": "20261127-150001-d4t1",
+      "criadoEm": "2026-11-25T01:45:37.269Z",
+      "formato": "feed",
+      "ordem": 8,
+      "agenda": "Sex 27/11 · 14:00",
+      "status": "draft",
+      "tema": "Meme outrossim hodiernamente",
+      "headline": "Eu achando que minha redação tava nota 1000",
+      "template": "meme",
+      "imageHash": "55ee51157dcd5bcbd58ce85d2843692613a04915760f3ea55a51e5b3303cbf80",
+      "caption": "Colocar \"hodiernamente\" e \"outrossim\" dá aquela sensação deliciosa de intelectual… até sair o espelho da nota. 😂\n\nA banca do ENEM avalia 5 competências independentes: de nada adianta usar palavras difíceis se o argumento não progride (C3) ou se faltou elemento na conclusão (C5).\n\nEnvia para quem ama um \"outrossim\" 👇 e descobre quanto sua redação vale DE VERDADE mandando a foto no link da bio (1ª correção grátis)!",
+      "hashtags": [
+        "#MemeENEM",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#Outrossim",
+        "#Vestibulando",
+        "#Estudos"
+      ]
+    },
+    {
+      "id": "20261126-210001-d3n1",
+      "criadoEm": "2026-11-25T01:45:32.712Z",
+      "formato": "feed",
+      "ordem": 9,
+      "agenda": "Sex 27/11 · 20:00",
+      "status": "draft",
+      "tema": "Auditoria proposta genérica C5",
+      "headline": "Troque a proposta genérica por uma C5 nota 200",
+      "template": "auditoria",
+      "imageHash": "39bc9f18c42322374d26df4a3c99c3092da165d9021d2ebf8c38645cab4574ac",
+      "caption": "Escrever \"o governo deve tomar medidas\" é o jeito mais rápido de estacionar em 80 ou 120 pontos na Competência 5.\n\nNa grade oficial do Inep, ação genérica não conta! Você precisa deixar explícitos os 5 elementos: quem executa (agente), o que faz (ação concreta), como faz (meio/modo), para quê (finalidade) e um detalhamento extra.\n\nSalve esse antes e depois e mande a foto da sua redação no link da bio para conferir se sua proposta bate os 200 pontos!",
+      "hashtags": [
+        "#Competencia5",
+        "#PropostaDeIntervencao",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#Nota1000"
+      ]
+    },
+    {
+      "id": "20261127-090001-d4m1",
+      "criadoEm": "2026-11-25T01:45:35.702Z",
+      "formato": "feed",
+      "ordem": 10,
+      "agenda": "Sáb 28/11 · 09:00",
+      "status": "draft",
+      "tema": "Repertório Constituição 1988",
+      "headline": "“São direitos sociais a educação, a saúde, o trabalho e a moradia.”",
+      "template": "repertorio",
+      "imageHash": "f83831a5ad061acfd91e1acb24d95c958b0fcb381cf2b867fbd4a0cbb7c1fc8e",
+      "caption": "Muita gente acha que citar a Constituição de 1988 é \"clichê\" — mas a banca do ENEM não penaliza repertório conhecido, e sim repertório mal utilizado!\n\nO segredo para o Artigo 6º render nota máxima na Competência 2 é o contraste: apresente o direito garantido no papel e prove, no seu argumento, qual obstáculo impede que ele chegue a toda a população.\n\nSalve essa ficha para usar na introdução ou no D1 e teste seu texto gratuitamente no link da bio!",
+      "hashtags": [
+        "#RepertorioENEM",
+        "#Constituicao1988",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#Competencia2",
+        "#StudygramBR"
+      ]
+    },
+    {
+      "id": "20261128-150001-d5t1",
+      "criadoEm": "2026-11-25T01:45:43.590Z",
+      "formato": "feed",
+      "ordem": 11,
+      "agenda": "Sáb 28/11 · 14:00",
+      "status": "draft",
+      "tema": "Meme esqueceu detalhamento C5",
+      "headline": "Quando eu esqueço o detalhamento na Conclusão",
+      "template": "meme",
+      "imageHash": "087393298bf8e1c1d9a3e83a8baea9c038407bd36383df344fcf0e162fda77af",
+      "caption": "Não existe dor maior do que perder 40 pontos por causa de UMA única frase de detalhamento que ficou faltando na conclusão. 😭\n\nO jeito mais simples de nunca mais esquecer: depois de citar o agente (ex.: \"o Ministério da Saúde\"), adicione um aposto explicativo entre travessões (\"— órgão responsável pelas políticas públicas do setor —\") ou exemplifique o meio de execução.\n\nSalve para não esquecer no dia da prova e testa sua última conclusão de graça no link da bio!",
+      "hashtags": [
+        "#MemeENEM",
+        "#Competencia5",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#PropostaDeIntervencao",
+        "#Vestibulando"
+      ]
+    },
+    {
+      "id": "20261127-210001-d4n1",
+      "criadoEm": "2026-11-25T01:45:38.887Z",
+      "formato": "feed",
+      "ordem": 12,
+      "agenda": "Sáb 28/11 · 20:00",
+      "status": "draft",
+      "tema": "Como evitar tangenciar o tema",
+      "headline": "Como não tangenciar o tema e travar em 40 pontos",
+      "template": "ficha",
+      "imageHash": "ccb7c625244b112db53c52489f2282a6827c2e4b31c9b3447ab10b48146cba8f",
+      "caption": "Tangenciar o tema é uma das armadilhas mais perigosas da redação do ENEM: você não zera, mas sua nota nas Competências 2, 3 e 5 fica travada no máximo em 40 pontos cada.\n\nComo evitar? Antes de escrever a primeira linha, circule cada núcleo de sentido da frase temática e garanta que TODOS apareçam claramente na sua introdução e na sua tese.\n\nSalve esta ficha de revisão e envie a foto da sua redação no link da bio para conferir se você atingiu 100% do recorte!",
+      "hashtags": [
+        "#Competencia2",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#DicasDeRedacao",
+        "#Tangenciamento",
+        "#EstudosENEM"
+      ]
+    },
+    {
+      "id": "20261128-210001-d5n1",
+      "criadoEm": "2026-11-25T01:45:45.203Z",
+      "formato": "feed",
+      "ordem": 13,
+      "agenda": "Dom 29/11 · 09:00",
+      "status": "draft",
+      "tema": "Repertório Paulo Freire",
+      "headline": "“A leitura do mundo precede a leitura da palavra.”",
+      "template": "repertorio",
+      "imageHash": "d80c06aa7720e74f5df08b9a0fc07c247ef3317335da9e6439bf9246ce7f538e",
+      "caption": "O educador brasileiro Paulo Freire é um dos repertórios mais legítimos e produtivos para o ENEM — especialmente em temas ligados à educação, desinformação, leitura ou exclusão social.\n\nAo defender que \"a leitura do mundo precede a leitura da palavra\", Freire ajuda a argumentar que o ensino precisa desenvolver senso crítico para que o aluno compreenda e transforme a realidade em que vive.\n\nSalve esse card para revisar antes da prova e teste sua redação de graça mandando a foto da folha no link da bio!",
+      "hashtags": [
+        "#PauloFreire",
+        "#RepertorioENEM",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#Competencia2",
+        "#DicasDeRedacao"
+      ]
+    },
+    {
+      "id": "20261129-210001-d6n1",
+      "criadoEm": "2026-11-25T01:45:50.021Z",
+      "formato": "feed",
+      "ordem": 14,
+      "agenda": "Dom 29/11 · 14:00",
+      "status": "draft",
+      "tema": "Meme letra no rascunho",
+      "headline": "Tentando decifrar a própria letra na hora de passar a limpo",
+      "template": "meme",
+      "imageHash": "ffad6dfc0c473b29b9548dcc35d57063543934c7e4d164a20b430511533e5b5a",
+      "caption": "Quem nunca travou tentando ler a própria letra na hora de passar o rascunho a limpo? 😂\n\nDica séria da banca: letra bonita NÃO vale ponto extra, mas se um trecho ficar ilegível o corretor não consegue avaliar (e se o texto inteiro for ilegível, a redação pode ser anulada).\n\nQuer testar se sua letra manuscrita está bem legível? Tira uma foto da folha e manda grátis no link da bio — nossa IA lê e corrige em menos de 1 minuto!",
+      "hashtags": [
+        "#MemeENEM",
+        "#RedacaoENEM",
+        "#ENEM2027",
+        "#Vestibulando",
+        "#Caligrafia",
+        "#HumorDeEstudante"
+      ]
+    },
+    {
+      "id": "20261130-210001-d7n1",
+      "criadoEm": "2026-11-25T01:45:56.124Z",
+      "formato": "feed",
+      "ordem": 15,
+      "agenda": "Dom 29/11 · 20:00",
+      "status": "draft",
+      "tema": "Meta semanal de redação",
+      "headline": "Quantas redações você corrigiu esta semana?",
+      "template": "revista",
+      "imageHash": "62923df0fdcd92e5c35e61af39023f366026cf019fb2355d8f63e26767cba5c9",
+      "caption": "Domingo à noite é o melhor momento para fazer o check-in dos seus estudos: você já escreveu e corrigiu pelo menos uma redação esta semana?\n\nQuem alcança 900+ no ENEM não espera o mês da prova — cria constância, descobre seus pontos fracos cedo e acompanha a evolução nota por nota.\n\nAproveite agora mesmo: acesse o link da bio, envie a foto da sua folha manuscrita e faça sua primeira correção gratuitamente!",
+      "hashtags": [
+        "#ENEM2027",
+        "#RedacaoENEM",
+        "#RotinaDeEstudos",
+        "#RumoAos1000",
+        "#Vestibular2027",
+        "#FocoNosEstudos"
+      ]
+    },
+    {
+      "id": "20261125-180001-st01",
+      "criadoEm": "2026-11-25T18:00:01.000Z",
+      "formato": "story",
+      "ordem": 1,
+      "agenda": "Qua 25/11 · 18:00",
+      "status": "draft",
+      "tema": "Diagnóstico da Redação ENEM 2027",
+      "headline": "Você sabe quanto sua redação vale HOJE?",
+      "template": "story_dark",
+      "imageHash": "629fd4263fbde806220e4a178e5c56cf1a30c3ee88f8386ba7b8a6c1f3d646bd",
+      "caption": "Story 1/5 (Qua 25/11 · 18:00) — Diagnóstico rápido: foto da folha -> nota nas 5 competências em <1 min com 1ª correção grátis via Link na bio.",
+      "hashtags": [
+        "#ENEM2027",
+        "#RedacaoENEM",
+        "#CorrecaoDeRedacao"
+      ]
+    },
+    {
+      "id": "20261126-180001-st02",
+      "criadoEm": "2026-11-26T18:00:01.000Z",
+      "formato": "story",
+      "ordem": 2,
+      "agenda": "Qui 26/11 · 18:00",
+      "status": "draft",
+      "tema": "3 Repertórios Coringa para Print",
+      "headline": "3 repertórios coringa p/ tirar print agora",
+      "template": "story_caderno",
+      "imageHash": "4beb29c21279b2638a745a06f2165fec2e8ed0a7a6ec5d038ad930540b884213",
+      "caption": "Story 2/5 (Qui 26/11 · 18:00) — Card salvável no formato caderno com 3 repertórios legitimados (Hannah Arendt, CF/88 Art. 6º e Paulo Freire).",
+      "hashtags": [
+        "#ENEM2027",
+        "#RepertorioENEM",
+        "#Competencia2"
+      ]
+    },
+    {
+      "id": "20261127-180001-st03",
+      "criadoEm": "2026-11-27T18:00:01.000Z",
+      "formato": "story",
+      "ordem": 3,
+      "agenda": "Sex 27/11 · 18:00",
+      "status": "draft",
+      "tema": "Duelo da Vírgula · C1",
+      "headline": "Duelo da Vírgula: qual frase está CERTA?",
+      "template": "story_royal",
+      "imageHash": "61cab41aa8d1c10f8959ebbef566b8259c48a08d05f5c0a55538cf637a2043a2",
+      "caption": "Story 3/5 (Sex 27/11 · 18:00) — Desafio interativo A vs B de pontuação na Competência 1 (sujeito + verbo sem vírgula separando).",
+      "hashtags": [
+        "#ENEM2027",
+        "#Competencia1",
+        "#GramaticaENEM"
+      ]
+    },
+    {
+      "id": "20261128-180001-st04",
+      "criadoEm": "2026-11-28T18:00:01.000Z",
+      "formato": "story",
+      "ordem": 4,
+      "agenda": "Sáb 28/11 · 18:00",
+      "status": "draft",
+      "tema": "Checklist dos 5 Elementos da C5",
+      "headline": "Checklist dos 5 elementos da C5 (dá print!)",
+      "template": "story_dark",
+      "imageHash": "4c3a9af1c3d4f691f1aebda3e58a900ebc58a42b822a216e07c6143a0c96fdc9",
+      "caption": "Story 4/5 (Sáb 28/11 · 18:00) — Checklist prático dos 5 elementos obrigatórios da Proposta de Intervenção (Agente, Ação, Meio, Finalidade e Detalhamento).",
+      "hashtags": [
+        "#ENEM2027",
+        "#Competencia5",
+        "#PropostaDeIntervencao"
+      ]
+    },
+    {
+      "id": "20261129-180001-st05",
+      "criadoEm": "2026-11-29T18:00:01.000Z",
+      "formato": "story",
+      "ordem": 5,
+      "agenda": "Dom 29/11 · 18:00",
+      "status": "draft",
+      "tema": "Domingo de Treino · Redação da Semana",
+      "headline": "Domingo de treino: já corrigiu sua redação?",
+      "template": "story_caderno",
+      "imageHash": "59ae7d373e79983c065f3eb57c6230e5ffa5fc70670efb0af71adc251e6f66ad",
+      "caption": "Story 5/5 (Dom 29/11 · 18:00) — Fechamento semanal motivacional com chamada direta para corrigir a redação da semana gratuitamente.",
+      "hashtags": [
+        "#ENEM2027",
+        "#RedacaoENEM",
+        "#StudygramBR"
+      ]
+    }
+  ]
+}
