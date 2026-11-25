@@ -1,0 +1,77 @@
+name: Postbot Cloud (Feed + Stories)
+
+on:
+  schedule:
+    # Horarios em UTC (America/Sao_Paulo = UTC-3)
+    - cron: '0 12 * * *' # 09:00 BRT -> Feed manha
+    - cron: '0 17 * * *' # 14:00 BRT -> Feed tarde
+    - cron: '0 21 * * *' # 18:00 BRT -> Story 9:16
+    - cron: '0 23 * * *' # 20:00 BRT -> Feed noite
+  workflow_dispatch:
+    inputs:
+      formato:
+        description: 'Formato para disparo manual (feed ou story)'
+        required: true
+        default: 'feed'
+        type: choice
+        options:
+          - feed
+          - story
+      dry_run:
+        description: 'Modo teste (valida Meta + URL sem publicar nada)'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: postbot-cloud
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Baixar fila e imagens
+        uses: actions/checkout@v4
+
+      - name: Configurar Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Publicar proximo post ou story
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_IG_ID: ${{ secrets.META_IG_ID }}
+          PUBLIC_IMAGE_BASE: https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main
+          OFFER_URL: https://dos600aos1000.onrender.com
+          HANDLE: '@dos600aos1000'
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true && 'true' || 'false' }}
+        run: |
+          case "${{ github.event.schedule }}" in
+            "0 12 * * *") export SLOT_FORMAT="feed" SLOT_HORA="09:00" ;;
+            "0 17 * * *") export SLOT_FORMAT="feed" SLOT_HORA="14:00" ;;
+            "0 21 * * *") export SLOT_FORMAT="story" SLOT_HORA="18:00" ;;
+            "0 23 * * *") export SLOT_FORMAT="feed" SLOT_HORA="20:00" ;;
+            *) export SLOT_FORMAT="${{ github.event.inputs.formato || 'feed' }}" SLOT_HORA="manual" ;;
+          esac
+          node cloud-publish.mjs
+
+      - name: Salvar status da fila
+        if: success()
+        run: |
+          if git diff --quiet queue.json; then
+            echo "Sem mudancas em queue.json"
+            exit 0
+          fi
+          git config user.name "postbot-cloud"
+          git config user.email "postbot-cloud@users.noreply.github.com"
+          git add queue.json
+          git commit -m "postbot: atualizar fila ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
