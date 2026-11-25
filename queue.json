@@ -24,10 +24,17 @@
       "imageHash": "d8f8d0af8bcb5d309cec726d6989fe0ca6de72a2069a6cbb059bbc7b2acfc94a",
       "headline": "Faltou um elemento na proposta de intervenção?",
       "publicadoEm": "2026-11-25T14:01:41.976Z"
+    },
+    {
+      "id": "20261125-180001-st01",
+      "imageHash": "629fd4263fbde806220e4a178e5c56cf1a30c3ee88f8386ba7b8a6c1f3d646bd",
+      "headline": "Você sabe quanto sua redação vale HOJE?",
+      "publicadoEm": "2026-11-25T14:31:10.214Z"
     }
   ],
   "slots": {
-    "2026-11-25 feed 09:00": "2026-11-25T14:01:41.976Z"
+    "2026-11-25 feed 09:00": "2026-11-25T14:01:41.976Z",
+    "2026-11-25 story 11:30": "2026-11-25T14:31:10.214Z"
   },
   "posts": [
     {
@@ -354,7 +361,7 @@
       "formato": "story",
       "ordem": 1,
       "agenda": "Qua 25/11 · 18:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Diagnóstico da Redação ENEM 2027",
       "headline": "Você sabe quanto sua redação vale HOJE?",
       "template": "story_dark",
@@ -364,7 +371,13 @@
         "#ENEM2027",
         "#RedacaoENEM",
         "#CorrecaoDeRedacao"
-      ]
+      ],
+      "fbPostId": "1708624954300077",
+      "igPostId": "18102408077082835",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261125-180001-st01.png",
+      "publicadoEm": "2026-11-25T14:31:10.214Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261126-180001-st02",
