@@ -54,6 +54,12 @@
       "imageHash": "5eed3a81977b716f35ed3b688949e7fdecbbd2c6dbdc31edb31405f720313204",
       "headline": "3 repertórios coringa p/ tirar print agora",
       "publicadoEm": "2026-11-26T14:30:22.415Z"
+    },
+    {
+      "id": "20261126-150001-d3t1",
+      "imageHash": "88656c2f839571dfd938eca0fa52512775a9b4c1c7015690aeef4afe805bb60d",
+      "headline": "Faltam 15 minutos e eu ainda tô no Desenvolvimento 2",
+      "publicadoEm": "2026-11-26T18:23:05.736Z"
     }
   ],
   "slots": {
@@ -62,7 +68,8 @@
     "2026-11-25 feed 14:00": "2026-11-25T17:00:19.680Z",
     "2026-11-25 feed 20:00": "2026-11-25T23:03:43.528Z",
     "2026-11-26 feed 09:00": "2026-11-26T12:00:35.699Z",
-    "2026-11-26 story 11:30": "2026-11-26T14:30:22.415Z"
+    "2026-11-26 story 11:30": "2026-11-26T14:30:22.415Z",
+    "2026-11-26 feed 14:00": "2026-11-26T18:23:05.736Z"
   },
   "posts": [
     {
@@ -171,7 +178,7 @@
       "formato": "feed",
       "ordem": 5,
       "agenda": "Qui 26/11 · 14:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Meme faltam 15 minutos D2",
       "headline": "Faltam 15 minutos e eu ainda tô no Desenvolvimento 2",
       "template": "meme",
@@ -182,7 +189,13 @@
         "#MemeENEM",
         "#RotinaDeEstudos"
       ],
-      "imageExt": "jpg"
+      "imageExt": "jpg",
+      "fbPostId": "1537036239483766_122113171899543554",
+      "igPostId": "18135095488748280",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261126-150001-d3t1.jpg",
+      "publicadoEm": "2026-11-26T18:23:05.736Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261125-210001-d2n1",
