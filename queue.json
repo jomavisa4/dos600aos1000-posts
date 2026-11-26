@@ -60,6 +60,12 @@
       "imageHash": "88656c2f839571dfd938eca0fa52512775a9b4c1c7015690aeef4afe805bb60d",
       "headline": "Faltam 15 minutos e eu ainda tô no Desenvolvimento 2",
       "publicadoEm": "2026-11-26T18:23:05.736Z"
+    },
+    {
+      "id": "20261125-210001-d2n1",
+      "imageHash": "25b48a038168ed3cee079206a4b7d7d47e4ae2adc0343d5fe94ee4f07941a71d",
+      "headline": "Escreveu no caderno? Descubra sua nota hoje",
+      "publicadoEm": "2026-11-26T23:00:38.317Z"
     }
   ],
   "slots": {
@@ -69,7 +75,8 @@
     "2026-11-25 feed 20:00": "2026-11-25T23:03:43.528Z",
     "2026-11-26 feed 09:00": "2026-11-26T12:00:35.699Z",
     "2026-11-26 story 11:30": "2026-11-26T14:30:22.415Z",
-    "2026-11-26 feed 14:00": "2026-11-26T18:23:05.736Z"
+    "2026-11-26 feed 14:00": "2026-11-26T18:23:05.736Z",
+    "2026-11-26 feed 20:00": "2026-11-26T23:00:38.317Z"
   },
   "posts": [
     {
@@ -203,7 +210,7 @@
       "formato": "feed",
       "ordem": 6,
       "agenda": "Qui 26/11 · 20:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Foto manuscrita nota real",
       "headline": "Escreveu no caderno? Descubra sua nota hoje",
       "template": "revista",
@@ -214,7 +221,13 @@
         "#RedacaoENEM",
         "#ENEM2027"
       ],
-      "imageExt": "jpg"
+      "imageExt": "jpg",
+      "fbPostId": "1537036239483766_122113249101543554",
+      "igPostId": "17877396669639041",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261125-210001-d2n1.jpg",
+      "publicadoEm": "2026-11-26T23:00:38.317Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261126-090001-d3m1",
