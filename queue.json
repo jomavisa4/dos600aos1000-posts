@@ -72,6 +72,12 @@
       "imageHash": "781eaae664ab09929c81c90f1d09bc777c3c91f772bd68f24a222a56b1386107",
       "headline": "As 3 falhas de vírgula que derrubam sua C1",
       "publicadoEm": "2026-11-27T13:45:45.685Z"
+    },
+    {
+      "id": "20261127-180001-st03",
+      "imageHash": "68c59bff0f1ede527eaa33d17be81bc9e46b8c7c656649f5d898c95b32fb7d9e",
+      "headline": "Duelo da Vírgula: qual frase está CERTA?",
+      "publicadoEm": "2026-11-27T14:31:13.849Z"
     }
   ],
   "slots": {
@@ -83,7 +89,8 @@
     "2026-11-26 story 11:30": "2026-11-26T14:30:22.415Z",
     "2026-11-26 feed 14:00": "2026-11-26T18:23:05.736Z",
     "2026-11-26 feed 20:00": "2026-11-26T23:00:38.317Z",
-    "2026-11-27 feed 09:00": "2026-11-27T13:45:45.685Z"
+    "2026-11-27 feed 09:00": "2026-11-27T13:45:45.685Z",
+    "2026-11-27 story 11:30": "2026-11-27T14:31:13.849Z"
   },
   "posts": [
     {
@@ -469,7 +476,7 @@
       "formato": "story",
       "ordem": 3,
       "agenda": "Sex 27/11 · 11:30",
-      "status": "draft",
+      "status": "published",
       "tema": "Duelo da Vírgula · C1",
       "headline": "Duelo da Vírgula: qual frase está CERTA?",
       "template": "story_royal",
@@ -480,7 +487,13 @@
         "#Competencia1",
         "#GramaticaENEM"
       ],
-      "imageExt": "jpg"
+      "imageExt": "jpg",
+      "fbPostId": "30326997253568028",
+      "igPostId": "18112970870622623",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261127-180001-st03.jpg",
+      "publicadoEm": "2026-11-27T14:31:13.849Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261128-180001-st04",
