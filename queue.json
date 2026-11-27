@@ -66,6 +66,12 @@
       "imageHash": "25b48a038168ed3cee079206a4b7d7d47e4ae2adc0343d5fe94ee4f07941a71d",
       "headline": "Escreveu no caderno? Descubra sua nota hoje",
       "publicadoEm": "2026-11-26T23:00:38.317Z"
+    },
+    {
+      "id": "20261126-090001-d3m1",
+      "imageHash": "781eaae664ab09929c81c90f1d09bc777c3c91f772bd68f24a222a56b1386107",
+      "headline": "As 3 falhas de vírgula que derrubam sua C1",
+      "publicadoEm": "2026-11-27T13:45:45.685Z"
     }
   ],
   "slots": {
@@ -76,7 +82,8 @@
     "2026-11-26 feed 09:00": "2026-11-26T12:00:35.699Z",
     "2026-11-26 story 11:30": "2026-11-26T14:30:22.415Z",
     "2026-11-26 feed 14:00": "2026-11-26T18:23:05.736Z",
-    "2026-11-26 feed 20:00": "2026-11-26T23:00:38.317Z"
+    "2026-11-26 feed 20:00": "2026-11-26T23:00:38.317Z",
+    "2026-11-27 feed 09:00": "2026-11-27T13:45:45.685Z"
   },
   "posts": [
     {
@@ -235,7 +242,7 @@
       "formato": "feed",
       "ordem": 7,
       "agenda": "Sex 27/11 · 09:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Erros de vírgula na C1",
       "headline": "As 3 falhas de vírgula que derrubam sua C1",
       "template": "caderno",
@@ -246,7 +253,14 @@
         "#PortuguesENEM",
         "#DicasDeRedacao"
       ],
-      "imageExt": "jpg"
+      "imageExt": "jpg",
+      "fbPostId": "1537036239483766_122113509087543554",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261126-090001-d3m1.jpg",
+      "publicadoEm": "2026-11-27T13:45:45.685Z",
+      "erros": {
+        "instagram": "Graph 400: Media ID is not available (code 9007/2207027)"
+      },
+      "erro": null
     },
     {
       "id": "20261127-150001-d4t1",
