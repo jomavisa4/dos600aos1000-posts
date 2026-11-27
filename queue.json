@@ -84,6 +84,12 @@
       "imageHash": "f645073810a4db27a69c2a4885cc8962d6d756c206090fe7329ea90805d4ef1b",
       "headline": "Eu achando que minha redação tava nota 1000",
       "publicadoEm": "2026-11-27T17:01:06.916Z"
+    },
+    {
+      "id": "20261126-210001-d3n1",
+      "imageHash": "fca3f851c66b7e6380420f51e1c1ac5a733ab4eb162ed2e35f029734a5c99406",
+      "headline": "Troque a proposta genérica por uma C5 nota 200",
+      "publicadoEm": "2026-11-27T23:00:26.468Z"
     }
   ],
   "slots": {
@@ -97,7 +103,8 @@
     "2026-11-26 feed 20:00": "2026-11-26T23:00:38.317Z",
     "2026-11-27 feed 09:00": "2026-11-27T13:45:45.685Z",
     "2026-11-27 story 11:30": "2026-11-27T14:31:13.849Z",
-    "2026-11-27 feed 14:00": "2026-11-27T17:01:06.916Z"
+    "2026-11-27 feed 14:00": "2026-11-27T17:01:06.916Z",
+    "2026-11-27 feed 20:00": "2026-11-27T23:00:26.468Z"
   },
   "posts": [
     {
@@ -307,7 +314,7 @@
       "formato": "feed",
       "ordem": 9,
       "agenda": "Sex 27/11 · 20:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Auditoria proposta genérica C5",
       "headline": "Troque a proposta genérica por uma C5 nota 200",
       "template": "auditoria",
@@ -318,7 +325,13 @@
         "#PropostaDeIntervencao",
         "#Nota1000"
       ],
-      "imageExt": "jpg"
+      "imageExt": "jpg",
+      "fbPostId": "1537036239483766_122113672869543554",
+      "igPostId": "18204666436383482",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261126-210001-d3n1.jpg",
+      "publicadoEm": "2026-11-27T23:00:26.468Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261127-090001-d4m1",
