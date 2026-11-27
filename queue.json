@@ -78,6 +78,12 @@
       "imageHash": "68c59bff0f1ede527eaa33d17be81bc9e46b8c7c656649f5d898c95b32fb7d9e",
       "headline": "Duelo da Vírgula: qual frase está CERTA?",
       "publicadoEm": "2026-11-27T14:31:13.849Z"
+    },
+    {
+      "id": "20261127-150001-d4t1",
+      "imageHash": "f645073810a4db27a69c2a4885cc8962d6d756c206090fe7329ea90805d4ef1b",
+      "headline": "Eu achando que minha redação tava nota 1000",
+      "publicadoEm": "2026-11-27T17:01:06.916Z"
     }
   ],
   "slots": {
@@ -90,7 +96,8 @@
     "2026-11-26 feed 14:00": "2026-11-26T18:23:05.736Z",
     "2026-11-26 feed 20:00": "2026-11-26T23:00:38.317Z",
     "2026-11-27 feed 09:00": "2026-11-27T13:45:45.685Z",
-    "2026-11-27 story 11:30": "2026-11-27T14:31:13.849Z"
+    "2026-11-27 story 11:30": "2026-11-27T14:31:13.849Z",
+    "2026-11-27 feed 14:00": "2026-11-27T17:01:06.916Z"
   },
   "posts": [
     {
@@ -275,7 +282,7 @@
       "formato": "feed",
       "ordem": 8,
       "agenda": "Sex 27/11 · 14:00",
-      "status": "draft",
+      "status": "published",
       "tema": "Meme outrossim hodiernamente",
       "headline": "Eu achando que minha redação tava nota 1000",
       "template": "meme",
@@ -286,7 +293,13 @@
         "#Outrossim",
         "#RedacaoENEM"
       ],
-      "imageExt": "jpg"
+      "imageExt": "jpg",
+      "fbPostId": "1537036239483766_122113578687543554",
+      "igPostId": "18646789861006413",
+      "imageUrl": "https://raw.githubusercontent.com/jomavisa4/dos600aos1000-posts/main/img/20261127-150001-d4t1.jpg",
+      "publicadoEm": "2026-11-27T17:01:06.916Z",
+      "erros": null,
+      "erro": null
     },
     {
       "id": "20261126-210001-d3n1",
