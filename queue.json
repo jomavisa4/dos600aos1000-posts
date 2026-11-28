@@ -405,7 +405,7 @@
       "formato": "feed",
       "ordem": 13,
       "agenda": "Dom 29/11 · 09:00",
-      "status": "draft",
+      "status": "erro",
       "tema": "Repertório Paulo Freire",
       "headline": "“A leitura do mundo precede a leitura da palavra.”",
       "template": "repertorio",
@@ -417,8 +417,9 @@
         "#StudygramBR"
       ],
       "imageExt": "jpg",
-      "tentativas": 2,
-      "ultimaFalha": "{\"facebook\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\",\"instagram\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\"}"
+      "tentativas": 3,
+      "ultimaFalha": "{\"facebook\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\",\"instagram\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\"}",
+      "erro": "{\"facebook\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\",\"instagram\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\"}"
     },
     {
       "id": "20261129-210001-d6n1",
