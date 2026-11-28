@@ -557,7 +557,7 @@
         "#PropostaDeIntervencao"
       ],
       "imageExt": "jpg",
-      "tentativas": 1,
+      "tentativas": 2,
       "ultimaFalha": "{\"facebook\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\",\"instagram\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\"}"
     },
     {
