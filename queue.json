@@ -438,7 +438,9 @@
         "#MemeENEM",
         "#Vestibulando"
       ],
-      "imageExt": "jpg"
+      "imageExt": "jpg",
+      "tentativas": 1,
+      "ultimaFalha": "{\"facebook\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\",\"instagram\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\"}"
     },
     {
       "id": "20261130-210001-d7n1",
