@@ -545,7 +545,7 @@
       "formato": "story",
       "ordem": 4,
       "agenda": "Sáb 28/11 · 11:30",
-      "status": "draft",
+      "status": "erro",
       "tema": "Checklist dos 5 Elementos da C5",
       "headline": "Checklist dos 5 elementos da C5 (dá print!)",
       "template": "story_dark",
@@ -557,8 +557,9 @@
         "#PropostaDeIntervencao"
       ],
       "imageExt": "jpg",
-      "tentativas": 2,
-      "ultimaFalha": "{\"facebook\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\",\"instagram\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\"}"
+      "tentativas": 3,
+      "ultimaFalha": "{\"facebook\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\",\"instagram\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\"}",
+      "erro": "{\"facebook\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\",\"instagram\":\"Graph 400: Cannot call API for app 1130709269957182 on behalf of user 1707853367793275 (code 200)\"}"
     },
     {
       "id": "20261129-180001-st05",
